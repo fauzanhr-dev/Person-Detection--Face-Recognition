@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 load_dotenv(override=True)
 
 # --- Models and Source ---
-MODEL_PATH = os.getenv("MODEL_PATH", "yolov8n.pt")
+MODEL_PATH = os.getenv("MODEL_PATH", "yolo26n.pt")
 RTSP_URLS_STR = os.getenv("RTSP_URLS", "0")
 RTSP_URLS = [int(url) if url.strip().isdigit() else url.strip() for url in RTSP_URLS_STR.split(',')]
 PROFILES_DIR = os.getenv("PROFILES_DIR", "known_faces")

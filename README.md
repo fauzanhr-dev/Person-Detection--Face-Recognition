@@ -67,7 +67,7 @@ The application follows these main steps:
 
 4.  **Download the YOLO model:**
 
-    The default model is `yolov8n.pt`. If you don't have it, it will be downloaded automatically on the first run.
+    The default model is `yolo26n.pt`. If you don't have it, it will be downloaded automatically on the first run.
 
 ## Configuration
 
@@ -76,7 +76,7 @@ The project is configured using a `.env` file. Create a file named `.env` in the
 ```
 # --- Models and Source ---
 # Path to the YOLO model file
-MODEL_PATH=yolov8n.pt
+MODEL_PATH=yolo26n.pt
 # Comma-separated list of RTSP URLs or video file paths (use '0' for webcam)
 RTSP_URLS=0
 # Directory to store known face profiles

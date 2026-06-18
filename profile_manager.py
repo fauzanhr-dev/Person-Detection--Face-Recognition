@@ -74,7 +74,7 @@ class ProfileManager:
                         try:
                             image = cv2.imread(file_path)
                             if image is None: continue
-                            faces = self.face_analyzer.get_faces(image, use_detection=True)
+                            faces = self.face_analyzer.get_faces(image)
                             if faces:
                                 migrated_embeddings[sample_filename] = faces[0].embedding
                         except Exception as e:
@@ -105,7 +105,7 @@ class ProfileManager:
                         if image is None:
                             quality = 0
                         else:
-                            faces = self.face_analyzer.get_faces(image, use_detection=True)
+                            faces = self.face_analyzer.get_faces(image)
                             if not faces:
                                 quality = 0
                             else:
@@ -296,7 +296,7 @@ class ProfileManager:
                     if image is None:
                         quality = 0
                     else:
-                        faces = self.face_analyzer.get_faces(image, use_detection=True)
+                        faces = self.face_analyzer.get_faces(image)
                         if not faces:
                             quality = 0
                         else:
